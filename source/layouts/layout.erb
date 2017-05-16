@@ -14,7 +14,9 @@
     <div class="sticky-wrapper">
       <div class="row">
         <nav class="main-nav">
-          <a href="/"><%= tag :img, :src => "images/logo.png", width: 330, id: "logo" %></a>
+          <% link_to "/", relative: true, class: 'logo-wrap' do %>
+            <%= tag :img, :src => "images/logo.png", width: 330, id: "logo" %>
+          <% end %>
           <ul>
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
             <li><a href="https://whiskeyshivers.myshopify.com/">Store</a></li>
