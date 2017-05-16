@@ -200,3 +200,6 @@ a {
 
 .sticky-wrapper {
   background: black; }
+
+.is_stuck {
+  z-index: 9999; }
