@@ -17,7 +17,7 @@ activate :relative_assets
 set :relative_links, true
 helpers do
   def nav_active(path)
-    current_page.path == path ? "active" : {}
+    current_page.path == path ? "active" : ""
   end
 end
 

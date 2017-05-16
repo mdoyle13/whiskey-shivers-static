@@ -19,9 +19,9 @@
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
             <li><a href="https://whiskeyshivers.myshopify.com/">Store</a></li>
             <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
-            <li><a href="/videya.html" class="<%= nav_active("videya.html")%>">Videya</a></li>
-            <li><a href="/about.html" class="<%= nav_active("about.html")%>">About</a></li>
-            <li><a href="/contact.html" class="<%= nav_active("contact.html")%>">Contact</a></li>
+            <li><%= link_to "Videya", '/videya.html', relative: true, class: nav_active("videya.html") %></li>
+            <li><%= link_to "About", '/about.html', relative: true, class: nav_active("about.html") %></li>
+            <li><%= link_to "Contact", '/contact.html', relative: true, class: nav_active("contact.html") %></li>
           </ul>
           <div id="social-links">
             <div class="icons">
