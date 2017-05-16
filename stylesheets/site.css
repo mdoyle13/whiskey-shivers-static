@@ -85,6 +85,9 @@ em {
     display: table;
     clear: both; }
 
+.logo-wrap {
+  text-decoration: none; }
+
 #logo {
   display: inline-block;
   vertical-align: middle;
