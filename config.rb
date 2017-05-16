@@ -13,7 +13,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 activate :livereload, apply_js_live: false
-
+activate :relative_assets
+set :relative_links, true
 helpers do
   def nav_active(path)
     current_page.path == path ? "active" : {}
