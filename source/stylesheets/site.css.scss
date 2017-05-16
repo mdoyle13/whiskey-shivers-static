@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//end reset
+$orange: #e45014;
+
+body {
+  background-color: black;
+  background: url('../images/background.jpg') no-repeat 50% 100% black;
+  background-size: contain;
+  color: white;
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 90%;
+  overflow-x: hidden;
+  padding-bottom: 600px;
+}
+
+h2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1em;
+}
+
+h5 {
+  margin-bottom: 1.25em;
+}
+
+p {
+  font-size: 0.90em;
+  line-height: 1.75em;
+  margin-bottom: 2em;
+  font-weight: lighter;
+}
+
+em {
+  font-style: italic;
+}
+
+.row {
+  padding: 0 30px;
+  box-sizing: border-box;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  &:after {
+    content: "";
+   display: table;
+   clear: both;
+  }
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+nav {
+  margin-top: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  ul {
+    display: inline-block;
+  }
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  a {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+#social-links {
+  text-align: right;
+  float: right;
+  .icons {
+    margin-bottom: 10px;
+  }
+  iframe {
+    float: right;
+  }
+  ul {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
+
+.marquee {
+  padding: 20px 0;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  p {
+    background: black;
+    padding: 0 10px;
+    display: inline-block;
+    text-align: center;
+  }
+  img {
+    vertical-align: middle;
+    display: inline;
+  }
+}
+
+.video-hero {
+  margin-top: 50px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px;
+  color: white;
+  background: $orange;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.one-up {
+  margin-top: 100px;
+  text-align: center;
+  img {
+    display: block;
+    margin: 0 auto 3.25em auto;
+  }
+  a {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.one-third {
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: 33%;
+  float: left;
+  padding: 0 2%;
+  img {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto 3.25em auto;
+  }
+}
+
+.two-thirds {
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: 66%;
+  float: left;
+  padding: 0 2%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.flush-left {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.flush-right {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.active {
+  color: $orange;
+}
+
+.videos-wrapper {
+  div {
+    margin-bottom: 2em;
+  }
+}
+
+
+.sticky-wrapper {
+  background: black;
+}

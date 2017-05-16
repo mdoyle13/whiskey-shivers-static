@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title  %></title>
+    <%= stylesheet_link_tag "site" %>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <div class="sticky-wrapper">
+      <div class="row">
+        <nav class="main-nav">
+          <a href="/"><%= tag :img, :src => "images/logo.png", width: 330, id: "logo" %></a>
+          <ul>
+            <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
+            <li><a href="https://whiskeyshivers.myshopify.com/">Store</a></li>
+            <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
+            <li><a href="/videya.html" class="<%= nav_active("videya.html")%>">Videya</a></li>
+            <li><a href="/about.html" class="<%= nav_active("about.html")%>">About</a></li>
+            <li><a href="/contact.html" class="<%= nav_active("contact.html")%>">Contact</a></li>
+          </ul>
+          <div id="social-links">
+            <div class="icons">
+              <ul>
+                <li><i class="fa fa-youtube-square fa-lg"></i></li>
+                <li><i class="fa fa-spotify fa-lg"></i></li>
+                <li><i class="fa fa-instagram fa-lg"></i></li>
+                <li><i class="fa fa-facebook fa-lg"></i></li>
+              </ul>
+            </div>
+            <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:2N91y9Uko6gWwugdCpxJYH&size=basic&theme=light" width="147" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+          </div>
+        </nav>
+        </div>
+      </div>
+      <section class="marquee">
+        <% 12.times do %>
+          <%= tag :img, :src => "images/scissors.jpg" %>
+        <% end %>  
+        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<a class="btn">Pre-Order</a></a></p>
+        <% 12.times do %>
+          <%= tag :img, :src => "images/scissors.jpg" %>
+        <% end %>
+      </section>
+    <%= yield %>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sticky-kit/1.1.2/jquery.sticky-kit.js" type="text/javascript" charset="utf-8"></script>
+    <%= javascript_include_tag "site" %>
+    <script type="text/javascript">
+      $(function() {
+        $('.marquee').marquee({
+        	//speed in milliseconds of the marquee
+        	duration: 15000,
+        	//gap in pixels between the tickers
+        	gap: 0,
+        	//time in milliseconds before the marquee will start animating
+        	delayBeforeStart: 300,
+        	//'left' or 'right'
+        	direction: 'left',
+        	//true or false - should the marquee be duplicated to show an effect of continues flow
+        	duplicated: true,
+          pauseOnHover: true
+        });
+        
+        $('.video-hero').fitVids();
+        $('.videos-wrapper').fitVids();
+        $('.sticky-wrapper').stick_in_parent();
+        
+          // Add smooth scrolling to all links
+          $("nav a.scroll-to").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "" && window.location.pathname == "/index.html") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+              $(event.currentTarget).addClass('active')
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+   
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } else {
+              window.location.href = $(event.currentTarget).data('href')
+            }
+          });
+      })
+    </script>
+  </body>
+</html>
