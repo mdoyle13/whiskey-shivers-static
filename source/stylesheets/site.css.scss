@@ -131,13 +131,21 @@ nav ul li {
 }
 
 #social-links {
+  position: absolute;
   text-align: right;
   float: right;
+  right: 20px;
+  top: 12px;
   .icons {
-    margin-bottom: 10px;
+    clear: right;
+    margin: 50px 10px 10px 0;
   }
   iframe {
     float: right;
+  }
+  iframe#bit-tracker {
+    margin-left: 5px;
+    margin-right: -10px;
   }
   ul {
     text-align: right;
@@ -247,4 +255,19 @@ a {
 
 .is_stuck {
   z-index: 9999;
+}
+
+.anchor {
+  position: relative;
+  top: -110px;
+}
+
+#bit-tracker {
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+}
+
+.row img {
+  max-width: 100%;
 }

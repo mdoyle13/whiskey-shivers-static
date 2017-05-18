@@ -112,12 +112,19 @@ nav ul li {
       color: #e45014; }
 
 #social-links {
+  position: absolute;
   text-align: right;
-  float: right; }
+  float: right;
+  right: 20px;
+  top: 12px; }
   #social-links .icons {
-    margin-bottom: 10px; }
+    clear: right;
+    margin: 50px 10px 10px 0; }
   #social-links iframe {
     float: right; }
+  #social-links iframe#bit-tracker {
+    margin-left: 5px;
+    margin-right: -10px; }
   #social-links ul {
     text-align: right; }
     #social-links ul li {
@@ -203,3 +210,15 @@ a {
 
 .is_stuck {
   z-index: 9999; }
+
+.anchor {
+  position: relative;
+  top: -110px; }
+
+#bit-tracker {
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85); }
+
+.row img {
+  max-width: 100%; }
