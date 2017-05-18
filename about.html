@@ -17,13 +17,15 @@
 <a href="/" class="logo-wrap">            <img src="images/logo.png" width="330" id="logo" />
 </a>          <ul>
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
-            <li><a href="https://whiskeyshivers.myshopify.com/">Store</a></li>
+            <li><a href="https://whiskeyshivers.myshopify.com/" target="_blank">Store</a></li>
             <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
             <li><a href="videya.html" class="">Videya</a></li>
             <li><a href="about.html" class="active">About</a></li>
             <li><a href="contact.html" class="">Contact</a></li>
           </ul>
           <div id="social-links">
+            <iframe id="bit-tracker" src="https://www.bandsintown.com/artist/Whiskey%20Shivers%20/track_button?size=large&display_tracker_count=true&text_color=%23E74832&background_color=%2331465C&hover_color=%23253445" height="32" width="165" scrolling="no" frameborder="0" style="border:none; overflow:hidden"; allowtransparency="true" ></iframe>
+            <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:2N91y9Uko6gWwugdCpxJYH&size=basic&theme=light" width="147" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
             <div class="icons">
               <ul>
                 <li><i class="fa fa-youtube-square fa-lg"></i></li>
@@ -32,7 +34,6 @@
                 <li><i class="fa fa-facebook fa-lg"></i></li>
               </ul>
             </div>
-            <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:2N91y9Uko6gWwugdCpxJYH&size=basic&theme=light" width="147" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
           </div>
         </nav>
         </div>
@@ -50,7 +51,20 @@
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
-        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<a class="btn">Pre-Order</a></a></p>
+        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<span class="btn">Pre-Order</span></a></p>
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+          <img src="images/scissors.jpg" />
+        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<span class="btn">Pre-Order</span></a></p>
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
@@ -67,6 +81,7 @@
     <div class="row">
   <div class="two-thirds flush-left">
   <h2>About</h2>
+  <img src="images/press.jpg" alt="Press" />
   <p>Barefoot, sleeveless and sweaty, Whiskey Shivers frontman and fiddle master Bobby Fitzgerald never stops smiling on stage. "All right! Let’s kick this thing in the face!” he barks, as the band tears into their stringed instruments at breakneck speed. &nbsp;</p>
   <p>It's almost impossible to watch him perform more than a song or two without cracking a smile yourself. His exuberance is contagious, and it bleeds through into the music. Whether they're playing at a backyard house party in Texas, a punk-rock dive bar or a sprawling country music festival, crowds take notice. People put down their phones, pick up their drinks and start dancing.</p>
   <p>“Whiskey Shivers isn't just the five of us on stage, it’s everybody in the room," Fitzgerald says. "We try to bring everybody into the moment and get them to realize there's no wall between us and the crowd. We're all in this together, and we're all here to have a good time. We'll do our best to facilitate it, but it takes all of us to make it happen. When you start to feel that, you can't help but feel a little attachment and become invested in the show. You realize, 'Oh, I'm here to have good time too!’”&nbsp;</p>
@@ -76,6 +91,7 @@
   <p>That sort of musical honesty is what brought together the ragtag group of string players from small towns around the country to Austin, TX, where Whiskey Shivers was formed when stand-up bassist Andrew VanVoorhees answered a dubious Craigslist ad from a man named "Bob" looking to form a bluegrass band.&nbsp;</p>
   <p>The full lineup now consists of Bobby Fitzgerald (vocals, fiddle) from Dundee, NY, Andrew VanVoorhees (bass, vocals) from Prineville, OR, Joe Deuce (washboards) from Vider, TX, Jeff “Horti” Hortillosa (vocals, guitar) from Middlesboro, KY, and James Bookert (banjo) from Georgetown, TX.</p>
   <p>Fitzgerald admits that it can sometimes seem impossible to maintain such a high level of energy night after night on the road. “Well, it can seem that way, up until the moment the show starts,” he says. “We could have a really tough day, driving through bad weather on no sleep, feeling like shit, the sound is terrible, or whatever else is going on that day. And then as soon as we start playing, it all just kind of falls away. All of the sudden we’re having a good time again, and the momentum carries itself. That's why we're doing this, because we love it.”</p>
+  <img src="images/press2.jpg" alt="Press2" />
   </div>
   <div class="one-third flush-right">
     <h2>Press</h2>
@@ -120,32 +136,31 @@
         $('.video-hero').fitVids();
         $('.videos-wrapper').fitVids();
         $('.sticky-wrapper').stick_in_parent();
-        
-          // Add smooth scrolling to all links
-          $("nav a.scroll-to").on('click', function(event) {
+        // Add smooth scrolling to all links
+        $("nav a.scroll-to").on('click', function(event) {
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "" && window.location.pathname == "/index.html") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
-              $(event.currentTarget).addClass('active')
-              // Store hash
-              var hash = this.hash;
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "" && window.location.pathname == "/index.html") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            $(event.currentTarget).addClass('active')
+            // Store hash
+            var hash = this.hash;
 
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-   
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } else {
-              window.location.href = $(event.currentTarget).data('href')
-            }
-          });
-      })
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+ 
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } else {
+            window.location.href = $(event.currentTarget).data('href')
+          }
+        });
+      });
     </script>
   </body>
 </html>
