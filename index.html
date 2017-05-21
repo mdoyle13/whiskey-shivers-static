@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Whiskey Shivers</title>
     <link href="stylesheets/site.css" rel="stylesheet" />
@@ -14,8 +14,9 @@
     <div class="sticky-wrapper">
       <div class="row">
         <nav class="main-nav">
+          <a href="#" id="menu-ctrl"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
 <a href="/" class="logo-wrap">            <img src="images/logo.png" width="330" id="logo" />
-</a>          <ul>
+</a>          <ul class="main">
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
             <li><a href="https://whiskeyshivers.myshopify.com/" target="_blank">Store</a></li>
             <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
@@ -38,7 +39,7 @@
         </nav>
         </div>
       </div>
-      <section class="marquee">
+      <section class="marquee hidden-sm">
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
@@ -78,11 +79,16 @@
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
       </section>
-    <section class="video-hero">
+    <section class="video-hero hidden-sm">
   <iframe src="//www.youtube.com/embed/JBXrTL3sDM0?autoplay=1&controls=0&showinfo=0" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 </section>
+
+<section class="one-up centered row hidden-lg" id="top-tour">
+  
+</section>
+
 <section class="one-up centered">
-  <h2>Some Part of Something out July 22nd 2017</h2>
+  <h2 style="font-size:130%;">Some Part of Something out July 22nd 2017</h2>
   <a href="http://www.pledgemusic.com/projects/whiskeyshivers"><img src="images/album.jpg" /></a>
   <br style="clear:both;">
   <a href="#" class="btn">Pre-Order</a>
@@ -99,13 +105,13 @@
   <div class="one-third centered" id="free-music">
     <script src="//cf.topspin.net/javascripts/topspin_core.js?aId=37414&amp;timestamp=1434399893" type="text/javascript"></script></p>
     <div align="center">
-    <h2 class="topspin-widget topspin-widget-email-for-media">Enter your email for free music</h2>
-    <p><object id="TSWidget241808" data="//cf.topspin.net/widgets/email2/swf/TSEmailMediaWidget.swf?timestamp=1434399893" type="application/x-shockwave-flash" width="300" height="250"><param value="always" name="allowScriptAccess" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="movie" value="//cf.topspin.net/widgets/email2/swf/TSEmailMediaWidget.swf?timestamp=1434399893" /><param name="flashvars" value="widget_id=https://cf.topspin.net/api/v1/artist/37414/email_for_media/241808?timestamp=1434399893&amp;theme=black&amp;highlightColor=0x00A1FF" /></object></div>
+    <h2 class="topspin-widget topspin-widget-email-for-media hidden-sm">Enter your email for free music</h2>
+    <p class="hidden-sm"><object id="TSWidget241808" data="//cf.topspin.net/widgets/email2/swf/TSEmailMediaWidget.swf?timestamp=1434399893" type="application/x-shockwave-flash" width="300" height="250"><param value="always" name="allowScriptAccess" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="movie" value="//cf.topspin.net/widgets/email2/swf/TSEmailMediaWidget.swf?timestamp=1434399893" /><param name="flashvars" value="widget_id=https://cf.topspin.net/api/v1/artist/37414/email_for_media/241808?timestamp=1434399893&amp;theme=black&amp;highlightColor=0x00A1FF" /></object></div>
     </div>
     <div class="topspin-widget topspin-widget-email-for-media"></div>
   </div>
 </section>
-<section class="one-up centered row">
+<section class="one-up centered row" id="tour-bottom">
   <a class="anchor" id="tour"></a>
   <h2>Upcoming Tour Dates</h2>
   <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="Whiskey Shivers" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#E67A00" data-popup-background-color="rgba(0,0,0,0)" data-background-color="rgba(0,0,0,0)" data-display-limit="15" data-link-text-color="#FFFFFF" data-font="inherit"></a>
@@ -118,7 +124,30 @@
     <script src="//cdn.jsdelivr.net/jquery.sticky-kit/1.1.2/jquery.sticky-kit.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/site.js"></script>
     <script type="text/javascript">
+      function showTourUpTop() {
+        $('#tour-bottom').detach().insertAfter('.video-hero')
+      }
+      
+      function checkScreenSize(size) {
+        if (size < 768) {
+          showTourUpTop();
+        }
+      }
+      
+      $( window ).resize(function(e) {
+        var win = $(this)
+        checkScreenSize(win.width())
+      });
+      
       $(function() {
+        checkScreenSize($(window).width())
+        
+        $('#menu-ctrl').click(function(e) {
+          e.preventDefault();
+          console.log('hi');
+          $('.sticky-wrapper').toggleClass('expanded');
+        });
+        
         $('.marquee').marquee({
         	//speed in milliseconds of the marquee
         	duration: 15000,

@@ -101,7 +101,7 @@ em {
 #logo {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 40px; }
+  margin-right: 50px; }
 
 nav {
   margin-top: 40px;
@@ -122,6 +122,10 @@ nav ul li {
     nav ul li a:hover {
       color: #e45014; }
 
+@media only screen and (max-width: 1050px) {
+  nav ul {
+    margin: 1em 0;
+    width: 100%; } }
 #social-links {
   position: absolute;
   text-align: right;
@@ -235,3 +239,72 @@ a {
 
 .row img {
   max-width: 100%; }
+
+#menu-ctrl {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: 10; }
+
+.hidden-lg {
+  display: none; }
+
+@media only screen and (max-width: 768px) {
+  .sticky-wrapper {
+    height: 75px;
+    overflow: hidden; }
+    .sticky-wrapper.expanded {
+      height: auto; }
+
+  #menu-ctrl {
+    display: block; }
+
+  .hidden-sm {
+    display: none; }
+
+  .hidden-lg {
+    display: block; }
+
+  .one-up {
+    margin-top: 20px; }
+
+  .one-third {
+    width: 100%; }
+
+  img {
+    max-width: 100%; }
+
+  nav ul.main {
+    display: block; }
+    nav ul.main li {
+      display: block;
+      text-align: center;
+      margin: 1.5em 0 1em 0; }
+
+  #social-links {
+    position: static;
+    width: 100%; }
+    #social-links iframe {
+      float: none;
+      display: block;
+      margin: 0 auto 1em auto; }
+    #social-links .icons {
+      margin-top: 20px; }
+    #social-links #bit-tracker {
+      margin: 0 auto !important; }
+    #social-links ul {
+      text-align: center; }
+
+  .main-nav {
+    margin-top: 20px; }
+
+  .logo-wrap {
+    display: block;
+    text-align: center;
+    width: 100%; }
+    .logo-wrap img#logo {
+      margin-right: 0;
+      width: 70%;
+      max-width: 240px;
+      min-width: 200px; } }

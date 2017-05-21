@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>About | Whiskey Shivers</title>
     <link href="stylesheets/site.css" rel="stylesheet" />
@@ -14,8 +14,9 @@
     <div class="sticky-wrapper">
       <div class="row">
         <nav class="main-nav">
+          <a href="#" id="menu-ctrl"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
 <a href="/" class="logo-wrap">            <img src="images/logo.png" width="330" id="logo" />
-</a>          <ul>
+</a>          <ul class="main">
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
             <li><a href="https://whiskeyshivers.myshopify.com/" target="_blank">Store</a></li>
             <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
@@ -38,7 +39,7 @@
         </nav>
         </div>
       </div>
-      <section class="marquee">
+      <section class="marquee hidden-sm">
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
@@ -118,7 +119,30 @@
     <script src="//cdn.jsdelivr.net/jquery.sticky-kit/1.1.2/jquery.sticky-kit.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/site.js"></script>
     <script type="text/javascript">
+      function showTourUpTop() {
+        $('#tour-bottom').detach().insertAfter('.video-hero')
+      }
+      
+      function checkScreenSize(size) {
+        if (size < 768) {
+          showTourUpTop();
+        }
+      }
+      
+      $( window ).resize(function(e) {
+        var win = $(this)
+        checkScreenSize(win.width())
+      });
+      
       $(function() {
+        checkScreenSize($(window).width())
+        
+        $('#menu-ctrl').click(function(e) {
+          e.preventDefault();
+          console.log('hi');
+          $('.sticky-wrapper').toggleClass('expanded');
+        });
+        
         $('.marquee').marquee({
         	//speed in milliseconds of the marquee
         	duration: 15000,
