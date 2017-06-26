@@ -21,7 +21,6 @@
           <ul class="main">
             <li><a href="#tour" data-href="index.html#tour" class="scroll-to">Tour</a></li>
             <li><a href="https://whiskeyshivers.myshopify.com/" target="_blank">Store</a></li>
-            <!-- <li><a href="#free-music" class="scroll-to">Free Music</a></li> -->
             <li><%= link_to "Videya", '/videya.html', relative: true, class: nav_active("videya.html") %></li>
             <li><%= link_to "About", '/about.html', relative: true, class: nav_active("about.html") %></li>
             <li><%= link_to "Contact", '/contact.html', relative: true, class: nav_active("contact.html") %></li>
@@ -60,6 +59,7 @@
     <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
     <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/jquery.sticky-kit/1.1.2/jquery.sticky-kit.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//cdn.jsdelivr.net/jquery.countdown/2.2.0/jquery.countdown.min.js" type="text/javascript" charset="utf-8"></script>
     <%= javascript_include_tag "site" %>
     <script type="text/javascript">
       function showTourUpTop() {
@@ -126,6 +126,13 @@
           } else {
             window.location.href = $(event.currentTarget).data('href')
           }
+        });
+        
+        $("#countdown")
+        .countdown("2017/07/21", function(event) {
+          $(this).text(
+            event.strftime('%D days %H hours %M minutes and %S seconds') + ' until Some Part of Something is released'
+          );
         });
       });
     </script>
