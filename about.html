@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>About | Whiskey Shivers</title>
+    <title>About - Whiskey Shivers</title>
+    <meta name="Description" content="About Whiskey Shivers">
+    <meta name="Keywords" content="whiskey, shivers, album, tour, dates, shows">
     <link href="stylesheets/site.css" rel="stylesheet" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css" type="text/css" media="screen">
     <!-- Facebook Pixel Code -->
@@ -19,11 +20,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', '1747681448580836'); 
+     fbq('init', '1747681448580836');
     fbq('track', 'PageView');
     </script>
     <noscript>
-     <img height="1" width="1" 
+     <img height="1" width="1"
     src="https://www.facebook.com/tr?id=1747681448580836&ev=PageView&noscript=1"/>
     </noscript>
   </head>
@@ -68,7 +69,7 @@
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
-        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<span class="btn">Pre-Order</span></a></p>
+        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out NOW &nbsp;&nbsp;<span class="btn">Pledge Music</span></a></p>
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
@@ -81,7 +82,7 @@
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
-        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<span class="btn">Pre-Order</span></a></p>
+        <p><a href="http://www.pledgemusic.com/projects/whiskeyshivers">"Some Part of Something" out July 21st &nbsp;&nbsp;<span class="btn">Pledge Music</span></a></p>
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
           <img src="images/scissors.jpg" />
@@ -114,7 +115,7 @@
     <h2>Press</h2>
     <div class="textwidget"><p><em> "Austin's Whiskey Shivers are bluegrass-fueled Americana for a generation that grew up listening to punk rock. This group of 20somethings plays banjos, fiddles and washboards at breakneck speeds while singing high, lonesome harmonies about love and video games." - <strong>Washington Post</strong></em></p>
     <p><em>"Austin-based bluegrass rock band the Whiskey Shivers, forced Ashton Kutcher into a hug.... Whiskey Shiver's - incredible show" -<strong> L.A Weekly</strong></em></p>
-    
+
     <p><em>"Chops away at traditional bluegrass constraints with a mischievous cleaver, mixing in shadows of Delta swamps and New Orleans basements... the fierce inertia of Old Crow Medicine Show, the ramshackle folk punch of Felice Brothers and the punk energy of a pre-sobriety Deer Tick." - <strong>Rolling Stone&nbsp;</strong></em></p>
     <div>&nbsp;</div>
     <p><em>"They've been killing it in Austin for a few years now. They have that spirit of busking, that punk spirit of 'let's lay it on the line, let's play our instruments hard and messy and just have a great time.'" - <strong>Ann Powers, NPR World Café</strong></em></p>
@@ -128,38 +129,38 @@
     <p><em>"Infectious...this album doesn’t just capture what the Whiskey Shivers do live, it elevates it.&nbsp;- <strong>Saving Country Music</strong></em></div></p>
   </div>
 </div>
-    
+
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
     <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/jquery.sticky-kit/1.1.2/jquery.sticky-kit.js" type="text/javascript" charset="utf-8"></script>
-    <script src="//cdn.jsdelivr.net/jquery.countdown/2.2.0/jquery.countdown.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/site.js"></script>
     <script type="text/javascript">
       function showTourUpTop() {
         $('#tour-bottom').detach().insertAfter('.video-hero')
       }
-      
+
       function checkScreenSize(size) {
         if (size < 768) {
           showTourUpTop();
         }
       }
-      
+
       $( window ).resize(function(e) {
         var win = $(this)
         checkScreenSize(win.width())
       });
-      
+
       $(function() {
         checkScreenSize($(window).width())
-        
+
         $('#menu-ctrl').click(function(e) {
           e.preventDefault();
           console.log('hi');
           $('.sticky-wrapper').toggleClass('expanded');
         });
-        
+
         $('.marquee').marquee({
         	//speed in milliseconds of the marquee
         	duration: 15000,
@@ -173,7 +174,7 @@
         	duplicated: true,
           pauseOnHover: true
         });
-        
+
         $('.video-hero').fitVids();
         $('.videos-wrapper').fitVids();
         $('.sticky-wrapper').stick_in_parent();
@@ -193,20 +194,13 @@
             $('html, body').animate({
               scrollTop: $(hash).offset().top
             }, 800, function(){
- 
+
               // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
             });
           } else {
             window.location.href = $(event.currentTarget).data('href')
           }
-        });
-        
-        $("#countdown")
-        .countdown("2017/07/21", function(event) {
-          $(this).text(
-            event.strftime('%D days %H hours %M minutes and %S seconds') + ' until Some Part of Something is released'
-          );
         });
       });
     </script>
