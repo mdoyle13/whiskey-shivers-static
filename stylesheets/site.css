@@ -109,7 +109,9 @@ nav {
   vertical-align: middle;
   width: 100%; }
   nav ul {
-    display: inline-block; }
+    display: inline-block;
+    position: relative;
+    z-index: 10; }
 
 nav ul li {
   display: inline-block;
